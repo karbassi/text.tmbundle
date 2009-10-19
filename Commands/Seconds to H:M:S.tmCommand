@@ -5,14 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>say `echo "$TM_SELECTED_TEXT"` &amp;</string>
+	<string>#!/usr/bin/env ruby -wKU
+
+if ENV['TM_SELECTED_TEXT'] != nil
+	time = ENV['TM_SELECTED_TEXT'].to_i
+	converted = [time/3600, time/60 % 60, time % 60].map{|t| t.to_s.rjust(2, '0')}.join(':')
+	p time
+	p converted
+end</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>name</key>
-	<string>Speak Document / Selection</string>
+	<string>Seconds to H:M:S</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>replaceSelectedText</string>
 	<key>uuid</key>
-	<string>D26BEEE3-7439-4B7E-AD9D-9A144CDC5873</string>
+	<string>18BBA0EE-C156-46B7-84AD-FE5E9533DBCE</string>
 </dict>
 </plist>

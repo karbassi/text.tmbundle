@@ -5,14 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>say `echo "$TM_SELECTED_TEXT"` &amp;</string>
+	<string>open "$(cat)"
+</string>
+	<key>fallbackInput</key>
+	<string>scope</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string></string>
 	<key>name</key>
-	<string>Speak Document / Selection</string>
+	<string>Open Current URL</string>
 	<key>output</key>
 	<string>discard</string>
+	<key>scope</key>
+	<string>markup.underline.link - markup.underline.link.relative</string>
 	<key>uuid</key>
-	<string>D26BEEE3-7439-4B7E-AD9D-9A144CDC5873</string>
+	<string>5A08E461-05CC-4C03-9DC8-BF118594EA3E</string>
 </dict>
 </plist>
