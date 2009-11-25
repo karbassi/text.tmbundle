@@ -10,11 +10,12 @@
 if ENV['TM_SELECTED_TEXT'] != nil
 	time = ENV['TM_SELECTED_TEXT'].to_i
 	converted = [time/3600, time/60 % 60, time % 60].map{|t| t.to_s.rjust(2, '0')}.join(':')
-	p time
-	p converted
+	print "#{time} = #{converted}"
 end</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^C</string>
 	<key>name</key>
 	<string>Seconds to H:M:S</string>
 	<key>output</key>
